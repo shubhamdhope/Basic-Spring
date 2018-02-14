@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+   >
+
+   <bean id = "employee" class = "com.shubham.autowire.Employee" >	<!-- autowire="byName" -->
+      <property name = "empId" value = "101"/>						<!-- autowire="byType" -->
+      <property name = "empName" value = "A"/>						<!-- autowire="constructor" -->
+   </bean>
+   
+   <bean id = "address" class = "com.shubham.autowire.Address">
+   	  <property name="city" value="Pune"/>
+   	  <property name="state" value="Maharashtra"/>
+   </bean>
+   
+ <!--   <bean id = "address1" class = "com.shubham.autowire.Address">	autowire-candidate="false" for multiple same autowire byType
+   	  <property name="city" value="Akola"/>
+   	  <property name="state" value="Maharashtra"/>
+   </bean> -->
+
+</beans>
